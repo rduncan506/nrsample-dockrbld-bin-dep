@@ -3,7 +3,7 @@ FROM registry-nrpartners.rhcloud.com/newrelic/rhel71:nr-java-tomcat
 # ENV NEWRELIC_APP_NAME="Ronnie RH Application"
 # ENV ADDITIONAL_VM_ARGS=
 EXPOSE 8080 8888
-CMD mkdir /opt/newrelic/logs
+RUN mkdir /opt/newrelic/logs
 RUN curl https://raw.githubusercontent.com/rduncan506/ose-newrelic/master/deployments/NewRelicExample.war -o /opt/tomcat/webapps/NewRelicExample.war
-CMD /opt/tomcat/bin/catalina.sh stop -force
-CMD /opt/tomcat/bin/catalina.sh start
+RUN /opt/tomcat/bin/catalina.sh stop -force
+RUN /opt/tomcat/bin/catalina.sh start
