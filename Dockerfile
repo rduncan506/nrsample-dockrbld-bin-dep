@@ -13,5 +13,5 @@ RUN chmod -R 777 /opt/tomcat/temp
 RUN chmod -R 777 /opt/newrelic
 RUN chmod -R 777 /opt/newrelic/logs
 RUN curl https://raw.githubusercontent.com/rduncan506/ose-newrelic/master/deployments/NewRelicExample.war -o /opt/tomcat/webapps/NewRelicExample.war
-# RUN /opt/tomcat/bin/catalina.sh stop -force
-# RUN /opt/tomcat/bin/catalina.sh start
+RUN /opt/tomcat/bin/catalina.sh stop
+RUN /opt/tomcat/bin/catalina.sh start
