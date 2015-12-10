@@ -3,7 +3,7 @@ FROM registry-nrpartners.rhcloud.com/newrelic/rhel71:nr-java-tomcat
 ENV CATALINA_HOME="/opt/tomcat"
 ENV JRE_HOME="/usr/java/latest"
 ENV NEWRELIC_KEY="'d8550e35c5d7cd44f004635fb48c0ca7ebe63904'"
-ENV NEWRELIC_APP_NAME="'RD Fixing Docker File'"
+ENV NEWRELIC_APP_NAME="'RD OSE New Relic Example'"
 # ENV ADDITIONAL_VM_ARGS=
 
 EXPOSE 8080 8888
